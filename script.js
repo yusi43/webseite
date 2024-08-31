@@ -8,3 +8,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
         alert('Nachricht gesendet: ');
     }).catch(error => console.error('Fehler:', error));
 });
+document.getElementById('mobile-menu').addEventListener('click', function() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('open'); // Fügt die Klasse 'open' hinzu oder entfernt sie
+});
