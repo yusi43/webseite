@@ -30,6 +30,9 @@ nav ul {
     justify-content: center;
     align-items: center;
     gap: 40px;
+    flex-wrap: wrap; /* Ermöglicht das Umbruch für mobile Geräte */
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li a {
@@ -54,38 +57,42 @@ header {
     padding: 80px 20px; /* Abstand für das feste Menü */
     background-color: #ffffff;
     border-bottom: 3px solid #e0e0e0;
+    flex-wrap: wrap; /* Ermöglicht das Umbruch des Inhalts */
 }
 
 .intro {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 40px;
+    gap: 20px;
     max-width: 1200px;
     width: 100%;
     padding: 20px;
+    flex-wrap: wrap; /* Für kleine Bildschirme */
 }
 
 .portrait {
-    width: 220px;
+    width: 200px;
     height: auto;
     border-radius: 50%;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
 }
 
 .text {
     max-width: 600px;
+    text-align: center; /* Zentriere den Text auf mobilen Geräten */
 }
 
 .text h1 {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
 }
 
 .text p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #555;
     margin-bottom: 5px;
 }
@@ -106,7 +113,7 @@ section:hover {
 
 h2 {
     color: #007BFF;
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 15px;
 }
 
@@ -159,4 +166,49 @@ form button {
 
 form button:hover {
     background-color: #0056b3;
+}
+
+/* Medienabfragen für Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text h1 {
+        font-size: 1.8rem;
+    }
+
+    .text p {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        padding: 8px 10px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .portrait {
+        width: 150px;
+    }
+
+    .text h1 {
+        font-size: 1.5rem;
+    }
+
+    .text p {
+        font-size: 0.9rem;
+    }
 }
