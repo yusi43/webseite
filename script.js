@@ -5,6 +5,6 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
         method: 'POST',
         body: formData
     }).then(response => response.text()).then(data => {
-        alert('Nachricht gesendet: ' + data);
+        alert('Nachricht gesendet: ');
     }).catch(error => console.error('Fehler:', error));
 });
