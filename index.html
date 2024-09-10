@@ -64,18 +64,52 @@
     <section id="skills">
         <h2>Skills</h2>
         <ul>
-            <li>Projekt-Management</li>
-            <li>MS-Office</li>
-            <li>IT Affinität</li>
-            <li>Kommunikation</li>
-            <li>Teamplay</li>
+            <li>Projekt-Management
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 80%;"></div>
+                </div>
+            </li>
+            <li>MS-Office
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 70%;"></div>
+                </div>
+            </li>
+            <li>IT Affinität
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%;"></div>
+                </div>
+            </li>
+            <li>Kommunikation
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%;"></div>
+                </div>
+            </li>
+            <li>Teamplay
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 75%;"></div>
+                </div>
+            </li>
+            <li>Java
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 60%;"></div>
+                </div>
+            </li>
+            <li>HTML
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 70%;"></div>
+                </div>
+            </li>
         </ul>
     </section>
 
     <!-- Kontakt -->
     <section id="kontakt">
         <h2>Kontakt</h2>
-        <form id="contact-form">
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Replace with your Access Key -->
+            <input type="hidden" name="access_key" value="bee5c450-dbc1-433b-b165-689a60570bf2">
+
+            <!-- Form Inputs -->
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             
@@ -84,7 +118,13 @@
             
             <label for="message">Nachricht:</label>
             <textarea id="message" name="message" required></textarea>
-            
+
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <!-- Custom Confirmation / Success Page -->
+            <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
             <button type="submit">Senden</button>
         </form>
     </section>

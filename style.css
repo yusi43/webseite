@@ -177,6 +177,19 @@ form button:hover {
     background-color: #0056b3;
 }
 
+.skill-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.skill-level {
+    height: 10px;
+    background-color: #007BFF;
+    border-radius: 5px;
+}
+
 /* Medienabfragen für Responsiveness */
 @media (max-width: 768px) {
     .menu-toggle {
